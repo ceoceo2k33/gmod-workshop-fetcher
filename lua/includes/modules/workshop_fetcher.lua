@@ -18,6 +18,14 @@ do
 
     ---@class SteamAPIResponse
     ---@field response SteamCollectionResponse
+
+    ---@class WorkshopFetcher
+    ---@field STEAM_API_URL string
+    ---@field ParseResponse fun(steam: SteamAPIResponse): string[]?
+    ---@field BuildRequestBody fun(count: number, collectionID: number): table
+    ---@field OnAPISuccess fun(tbl: SteamAPIResponse)
+    ---@field OnAPIError fun(err: any)
+    ---@field AddCollection fun(collectionID: number)
 end
 
 local ipairs = ipairs
